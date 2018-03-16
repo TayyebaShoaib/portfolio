@@ -72,11 +72,13 @@ a {
     overflow: hidden;
     padding: 0 1em; }
 
+.page-home {
+    position: relative;
+}
 
 .page-home section {
     background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
     background-position: center;
-
 
     max-width: 600px;
     margin: 50px auto;
@@ -92,9 +94,7 @@ a {
     font-family: "Fira Mono", monospace;
     font-size: 30px;
     color: #d0d0d02e;
-    position: relative;
-    top: -70px;
-    left: -90px;
+    /* position: relative; */
     pointer-events: none;
  }
 
