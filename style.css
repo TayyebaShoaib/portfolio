@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%; }
+a {
+  text-decoration: none; }
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  height: 100vh; }
+
+.left {
+    background-color: #1b2f46;
+    box-shadow: 4px 0px 10px -4px rgba(237,242,248,1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2em 0 1.4em 0; }
+
+.left:hover .text {
+    transform: translateX(0); }
+
+.left:hover .text:nth-of-type(3) {
+    color: red;
+}
+
+.left a {
+    display: block;
+    /* background-color: red; */
+    padding-top: 0.5em; }
+
+.left a:not(:last-child) {
+    margin-bottom: 0.5em; }
+
+.left a.active {
+    background-color: #f7feff; }
+
+.left a.active .text {
+    transform: translateX(0); }
+
+.left img {
+    width: 30px;
+    height: 30px; }
+
+.left .text {
+    transform: translateX(-100px);
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    color: #1bdbef;
+    font-size: 20px; }
+
+.right {
+    background: #1c3149;
+    background: -moz-radial-gradient(center, ellipse cover,  #1c3149 0%, #0d121c 80%);
+    /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1c3149), color-stop(80%,#0d121c)); */
+    background: -webkit-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
+    background: -o-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
+    background: -ms-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
+    background: radial-gradient(ellipse at center,  #1c3149 0%, #0d121c 80%);
+    overflow: hidden; }
+
+.right h1 {
+    color: #fff; }
+
+pre {
+    overflow: auto;
+    color: #fff; }
+
+.page-home {
+    text-align: center; }
+
+.page-home section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    /* position: relative; */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); }
+
+.page-home section {
+    background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
+    background-position: center; }
+
+.page-home pre {
+    text-align: left;
+    font-family: "Fira Mono", monospace;
+    font-size: 30px;
+    color: #d0d0d0;
+    position: relative;
+    top: -70px;
+    left: -70px;
+    /* z-index: -1; */
+    pointer-events: none; }
+
+@media (max-width: 500px) {
+
+    .page-home pre {
+        font-size: 20px; }
+
+}
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(400px, 1fr));
+}
+.projects img {
+  display: block;
+  width: 100%;
+}
