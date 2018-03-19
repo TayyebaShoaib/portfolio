@@ -10,7 +10,7 @@ a {
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 .container {
   position: absolute;
@@ -68,13 +68,13 @@ a {
     font-size: 20px;
 }
 .right {
-    background: #1c3149;
-    background: -moz-radial-gradient(center, ellipse cover,  #1c3149 0%, #0d121c 80%);
-    /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1c3149), color-stop(80%,#0d121c)); */
-    background: -webkit-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
-    background: -o-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
-    background: -ms-radial-gradient(center, ellipse cover,  #1c3149 0%,#0d121c 80%);
-    background: radial-gradient(ellipse at center,  #1c3149 0%, #0d121c 80%);
+    background: #40798c;
+    background: -moz-radial-gradient(center, ellipse cover,  #40798c 0%, #0d121c 80%);
+    /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#40798c), color-stop(80%,#0d121c)); */
+    background: -webkit-radial-gradient(center, ellipse cover,  #40798c 0%,#0d121c 80%);
+    background: -o-radial-gradient(center, ellipse cover,  #40798c 0%,#0d121c 80%);
+    background: -ms-radial-gradient(center, ellipse cover,  #40798c 0%,#0d121c 80%);
+    background: radial-gradient(ellipse at center,  #40798c 0%, #0d121c 80%);
     overflow: hidden;
     padding: 0 1em;
 }
@@ -143,11 +143,51 @@ a {
     }
 }
                                                                     /********************** Portfolio **********************/
-.portfolio svg path:hover {
-    fill: yellow !important;
-}
-.projects ul {
-    list-style: none;
-    display: flex;
 
+.portfolio-right {
+    background-color: #40798c;
+    padding: 5em 0;
+}
+.projects {
+    list-style: none;
+    width: 95%;
+    margin: 0 auto;
+}
+.projects .project {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-width: 400px;
+    overflow: hidden;
+}
+.projects .project img {
+    width: 100%;
+    display: block;
+}
+.projects .project .focus {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 300ms;
+    transition: opacity ease-in-out 300ms;
+}
+.project h2 {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+}
+.projects img.focus {
+    width: 100px;
+}
+.projects .project:hover {
+    opacity: 0.7;
+}
+.projects .project:hover .focus {
+    opacity: 1;
 }
