@@ -88,9 +88,9 @@ a {
     background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
     background-position: center;
 
-    width: 35%;
-    margin: 0 auto;
-    padding: 40px;
+    /* width: 900px; */
+    max-width: 600px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     box-shadow: 0 0 30px 2px #999;
@@ -100,8 +100,7 @@ a {
     position: absolute;
     z-index: 3;
     top: 35%;
-    transform: translateY(-50%);
-    left: 10%;
+    left: 5%;
 }
 .page-home pre {
 
@@ -118,10 +117,23 @@ a {
     height: 100%;
  }
 
+ @media (max-width: 700px) {
+
+     .page-home pre {
+         font-size: 20px;
+     }
+     .page-home section {
+         max-width: 350px;
+     }
+ }
+
 @media (max-width: 500px) {
 
     .page-home pre {
         font-size: 20px;
+    }
+    .page-home section {
+        max-width: 250px;
     }
 }
 /* Projects */
