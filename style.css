@@ -106,7 +106,7 @@ a {
     position: absolute;
     z-index: 3;
     top: 35%;
-    left: 5%;
+    margin: 0 5em;
 }
 .page-home pre {
 
@@ -123,23 +123,25 @@ a {
     height: 100%;
  }
 
- @media (max-width: 700px) {
+ @media (max-width: 800px) {
 
      .page-home pre {
          font-size: 20px;
      }
      .page-home section {
          max-width: 350px;
+         margin: 0 3em;
      }
  }
 
 @media (max-width: 500px) {
 
     .page-home pre {
-        font-size: 20px;
+        font-size: 25px;
     }
     .page-home section {
         max-width: 250px;
+        margin: 0 2em;
     }
 }
                                                                     /********************** Portfolio **********************/
@@ -152,9 +154,13 @@ a {
     list-style: none;
     width: 95%;
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
 }
 .projects .project {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     position: relative;
     max-width: 400px;
@@ -190,4 +196,16 @@ a {
 }
 .projects .project:hover .focus {
     opacity: 1;
+}
+@media (max-width: 800px) {
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
 }
