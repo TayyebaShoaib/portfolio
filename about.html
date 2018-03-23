@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>TS - Portfolio</title>
 </head>
 <body>
-<div class="container">
+<div class="portfolio-container">
   <div class="left-wrapper">
     <div class="left">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="TS logo">
+      </a>
       <nav>
         <a href="index.html">
           <img src="img/home.svg">
@@ -48,18 +52,24 @@
   </div>
 
   <div class="about-right">
-    <section>
-      <h1>ABOUT ME</h1>
-      <p>Everything started with a passion for Web Development. In 2017, I enrolled at the East London Advanced Technology Training (Elatt) Institute. I earned Level 1 and Level 2 certificates in Web Desgn and Development. The course taught the basics of web development (HTML, CSS and JavaScript), the bootstrap framework, the jQuery Library, content managemnet systems (Joomla and Wordpress), SQL and the MySQL database.</p>
-      <p>I also enjoy studying web development independently. I have a working knowledge of git and have experience with integrating third party APIs.</p>
-      <p>In Jan 2008, I joined Charitable Bookings as a front-end intern. My role involves learning and implementing AngularJS for their website and app.</p>
-      <p></p>
-    </section>
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Agl0r6IjcPw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container">
+      <h1>ABOUT ME</h1>    
+      <div class="row">
+        <div class="col-lg-6 col-md-12 about">
+          <section>
+            <p>Everything started with a passion for Web Development. In 2017, I enrolled at the East London Advanced Technology Training (Elatt) Institute. I earned Level 1 and Level 2 certificates in Web Desgn and Development. The course taught the basics of web development (HTML, CSS and JavaScript), the bootstrap framework, the jQuery Library, content managemnet systems (Joomla and Wordpress), SQL and the MySQL database.</p>
+            <p>I also enjoy studying web development independently. I have a working knowledge of git and have experience with integrating third party APIs.</p>
+            <p>In Jan 2008, I joined Charitable Bookings as a front-end intern. My role involves learning and implementing AngularJS in their website and app.</p>
+          </section>
+        </div>  
+        <div class="col-lg-6 col-md-12">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/Agl0r6IjcPw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>
 
 </body>

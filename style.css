@@ -14,17 +14,14 @@ a {
 *:after {
   box-sizing: inherit;
 }
-.container {
+.portfolio-container {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 69px 1fr;
   height: 100vh;
-}
-.left-wrapper {
-    background-color: #1b2f46;
+
 }
 .left {
     background-color: #1b2f46;
-    /*box-shadow: 4px 0px 10px -4px rgba(237,242,248,1);*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -32,6 +29,10 @@ a {
     padding: 2em 0 1.4em 0;
     height: 100vh;
     position: fixed;
+}
+.left .logo img {
+    height: 70px;
+    width: 70px;
 }
 .left:hover .text {
     transform: translateX(0);
@@ -41,7 +42,6 @@ a {
 }
 .left a {
     display: block;
-    /* background-color: red; */
     padding-top: 0.5em;
 }
 .left a:not(:last-child) {
@@ -96,7 +96,7 @@ a {
     background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
     background-position: center;
 
-    /* width: 900px; */
+    width: 100%; 
     max-width: 600px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -110,6 +110,34 @@ a {
     top: 35%;
     margin: 0 5em;
 }
+.page-home section h1 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.page-home section h2 {
+    font-size: 14px;
+    margin: 10px;
+}
+.page-home section button {
+    display: block;
+    background-color: #fff;
+    color: #1bdbef;
+    padding: 6px 15px 5px 15px;
+    border: 1px solid #0d121c;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px #999;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.page-home section button:hover {
+    background-color: #1bdbef;
+    border: 1px solid #1bdbef;
+    box-shadow: 1px 1px 4px 0px #999;
+    color: #0d121c;
+}
 .page-home pre {
 
     font-family: "Fira Mono", monospace;
@@ -119,7 +147,7 @@ a {
 
     position: absolute;
     z-index: 2;
-    top: 0;
+    top: -20px;
     left: -45px;
     width: 100%;
     height: 100%;
@@ -143,7 +171,8 @@ a {
     }
     .page-home section {
         max-width: 250px;
-        margin: 0 2em;
+        margin: 0;
+        padding: 4px;
     }
 }
                                                                     /********************** Portfolio **********************/
@@ -193,11 +222,13 @@ a {
 .projects img.focus {
     width: 100px;
 }
-.projects .project:hover {
-    opacity: 0.7;
+.projects .project:hover img {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .projects .project:hover .focus {
     opacity: 1;
+    cursor: pointer;
 }
 @media (max-width: 800px) {
 
@@ -216,7 +247,7 @@ a {
 
 .contact-right {
     height: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .contact-right h1 {
     text-align: center;
@@ -247,7 +278,7 @@ textarea {
     resize: none;
     font-size: 14px;
 }
-button {
+.contact-right button {
     display: block;
     margin: 14px auto;
     background-color: #1bdbef;
@@ -256,6 +287,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20px;
 }
 .contact-information #map {
     height: 400px;
@@ -290,3 +322,32 @@ button {
         text-align: center;
     }
 }
+                                                                    /********************** About **********************/
+
+.about-right {
+    background-color: #40798c;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+}
+.about-right .container {
+    margin: 20px auto;
+}
+.about-right .about {
+    padding-right: 50px;
+}
+.about-right p::first-letter {
+    font-size: 225%;
+}
+.about-right iframe {
+    width: 100%;
+    height: 325px;
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1440px;
+    }  
+}
+                                                                  

@@ -10,9 +10,12 @@
   <title>TS - Portfolio</title>
 </head>
 <body>
-<div class="container">
+<div class="portfolio-container">
   <div class="left-wrapper">
       <div class="left">
+        <a href="index.html" class="logo">
+          <img src="img/logo.svg" alt="TS logo">
+        </a>
         <nav>
           <a href="index.html">
             <img src="img/home.svg" alt="home icon">  
@@ -21,10 +24,6 @@
           <a href="about.html">
             <img src="img/woman.svg" alt="woman icon" />
             <div class="text">about</div>
-          </a>
-          <a href="#">
-            <img src="img/skills.svg" alt="skills icon" />
-            <div class="text">skills</div>
           </a>
           <a href="portfolio.html">
             <img src="img/portfolio.svg" alt="work icon">
@@ -58,9 +57,9 @@
       <div class="section">
           <div class="contact-form">
               <h2>Send A Message</h2>
-              <form>
+              <form method="get" action="send-mail.php">
                   <input type="text" name="name" placeholder="Name">
-                  <input type="email" name="name" placeholder="Email">
+                  <input type="email" name="email" placeholder="Email">
                   <input type="text" name="subject" placeholder="Subject">
                   <textarea name="message" placeholder="Enter Your Message"></textarea>
                   <button>Send Message</button>
@@ -86,7 +85,7 @@
               <ul>
                   <li>
                     <span><i class="fas fa-envelope"></i></span>
-                    tayyeba.t@email.com
+                    tayyeba.t@gmail.com
                   </li>
                   <li>
                     <span><i class="fas fa-phone"></i></span>
