@@ -96,7 +96,7 @@ a {
     background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
     background-position: center;
 
-    width: 100%; 
+    width: 100%;
     max-width: 600px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -218,6 +218,9 @@ a {
     width: 100%;
     padding: 20px;
     margin: 0;
+}
+.projects .modal img {
+    max-width: 400px;
 }
 .projects img.focus {
     width: 100px;
@@ -348,6 +351,5 @@ textarea {
 @media (min-width: 1800px) {
     .container {
         max-width: 1440px;
-    }  
+    }
 }
-                                                                  
