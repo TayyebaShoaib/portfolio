@@ -196,19 +196,12 @@ a {
     position: relative;
     max-width: 400px;
     overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
 }
-.projects .project img {
+.projects .project .main {
     width: 100%;
     display: block;
-}
-.projects .project .focus {
-    position: absolute;
-    top: 40%;
-    right: 40%;
-
-    opacity: 0;
-    -webkit-transition: opacity ease-in-out 300ms;
-    transition: opacity ease-in-out 300ms;
 }
 .project h2 {
     position: absolute;
@@ -219,8 +212,26 @@ a {
     padding: 20px;
     margin: 0;
 }
+.project img.focus {
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 100px;
+
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 300ms;
+    transition: opacity ease-in-out 300ms;
+}
+.project:hover img {
+    opacity: 0.5;
+}
+.project:hover img.focus {
+    opacity: 1;
+    cursor: pointer;
+}
 .modal-body .row {
     align-items: center;
+    justify-content: center;
 }
 .modal-body img {
     max-width: 400px;
@@ -238,21 +249,13 @@ a {
     margin-bottom: 10px;
     text-decoration: none;
 }
+.modal-body a:hover {
+    box-shadow: 0 4px 5px rgba(50,50,93,.6), 0 1px 5px rgba(0,0,0,.5);
+}
 .modal-body a img {
     max-width: 20px;
     width: 100%;
     margin-right: 4px;
-}
-.projects img.focus {
-    width: 100px;
-}
-.projects .project:hover img {
-    opacity: 0.5;
-    cursor: pointer;
-}
-.projects .project:hover .focus {
-    opacity: 1;
-    cursor: pointer;
 }
 @media (max-width: 800px) {
 
