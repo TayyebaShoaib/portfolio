@@ -275,6 +275,7 @@ a {
 .contact-right {
     height: 100%;
     margin-top: 40px;
+    padding: 0 15px;
 }
 .contact-right h1 {
     text-align: center;
@@ -286,6 +287,10 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
 }
 input {
     width: 70%;
@@ -305,13 +310,13 @@ textarea {
     resize: none;
     font-size: 14px;
 }
-.contact-right button {
-    display: block;
-    margin: 14px auto;
+.contact-form form button {
+    width: 180px;
+    margin: 14px 0;
     background-color: #1bdbef;
     color: white;
     padding: 14px 20px;
-    border: none;
+    border: transparent;
     border-radius: 4px;
     cursor: pointer;
     font-size: 20px;
@@ -347,6 +352,9 @@ textarea {
     }
     .contact-form {
         text-align: center;
+    }
+    .contact-form form {
+        align-items: center;
     }
 }
                                                                     /********************** About **********************/
