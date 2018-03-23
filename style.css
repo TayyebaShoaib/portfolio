@@ -219,8 +219,29 @@ a {
     padding: 20px;
     margin: 0;
 }
-.projects .modal img {
+.modal-body .row {
+    align-items: center;
+}
+.modal-body img {
     max-width: 400px;
+    width: 100%;
+}
+.modal-body a {
+    display: inline-block;
+    background-color: #1bdbef;
+    border-color: transparent;
+    border-radius: 5%;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.modal-body a img {
+    max-width: 20px;
+    width: 100%;
+    margin-right: 4px;
 }
 .projects img.focus {
     width: 100px;
