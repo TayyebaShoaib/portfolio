@@ -12,13 +12,14 @@ a {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 .portfolio-container {
-  display: grid;
-  grid-template-columns: 69px 1fr;
-  height: 100vh;
-
+    display: grid;
+    grid-template-columns: 69px 1fr;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
 }
 .left {
     background-color: #1b2f46;
@@ -36,9 +37,6 @@ a {
 }
 .left:hover .text {
     transform: translateX(0);
-}
-.left:hover .text:nth-of-type(3) {
-    color: red;
 }
 .left a {
     display: block;
@@ -77,7 +75,6 @@ a {
     background: -o-radial-gradient(center, ellipse cover,  #40798c 0%,#0d121c 80%);
     background: -ms-radial-gradient(center, ellipse cover,  #40798c 0%,#0d121c 80%);
     background: radial-gradient(ellipse at center,  #40798c 0%, #0d121c 80%);
-    overflow: hidden;
     padding: 0 1em;
 }
 .page-home {
@@ -89,8 +86,7 @@ a {
     position: absolute;
     z-index: 2;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 98%;
 }
 .page-home section {
     background-image: url(https://raw.githubusercontent.com/DevTips/DevTips-Starter-Kit/master/assets/img/tools.png);
@@ -115,28 +111,56 @@ a {
     margin: 5px 0;
 }
 .page-home section h2 {
-    font-size: 14px;
+    font-size: 20px;
     margin: 10px;
 }
-.page-home section button {
+.page-home h2.underline {
     display: block;
-    background-color: #fff;
-    color: #1bdbef;
-    padding: 6px 15px 5px 15px;
-    border: 1px solid #0d121c;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 3px 3px 5px 0px #999;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-.page-home section button:hover {
     background-color: #1bdbef;
-    border: 1px solid #1bdbef;
-    box-shadow: 1px 1px 4px 0px #999;
-    color: #0d121c;
+    width: 140px;
+    padding: 12px 15px;
+    margin: 20px 0;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
+    letter-spacing: 1.5px;
+}
+h2.underline > a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+h2.underline:hover a {
+    color: #1b2f46;
+}
+h2.underline > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1b2f46;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+h2.underline:hover > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+footer {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 .page-home pre {
 
@@ -187,14 +211,14 @@ a {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
 }
 .projects .project {
     margin: 0 auto;
     padding: 0;
     position: relative;
-    max-width: 400px;
+    max-width: 500px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
@@ -259,10 +283,10 @@ a {
     margin-right: 4px;
 }
 @media (max-width: 800px) {
-
+/*
     .projects {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 }
 @media (max-width: 500px) {
 
@@ -342,6 +366,9 @@ textarea {
     border: 1px solid #1bdbef;
     border-radius: 50%;
     text-align: center;
+}
+.contact-right footer {
+    color: #000;
 }
 @media (max-width: 900px) {
     .contact-right {
